@@ -6,10 +6,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://*.awsapps.com/*",
-        "https://*.signin.aws/*",
-        "https://*.signin.aws.amazon.com/*",
-        "https://*.amazonaws.com/*"
+        "https://*.awsapps.com/start/*",
+        "https://*.signin.aws/platform/*"
       ],
       "js": [
         "content.js"

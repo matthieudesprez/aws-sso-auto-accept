@@ -1,13 +1,21 @@
 {
   "manifest_version": 3,
   "name": "AWS SSO Auto Accept",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Automatically clicks the Allow button on AWS SSO consent pages",
   "content_scripts": [
     {
-      "matches": ["https://*.awsapps.com/start/*"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
+      "matches": [
+        "https://*.awsapps.com/*",
+        "https://*.signin.aws/*",
+        "https://*.signin.aws.amazon.com/*",
+        "https://*.amazonaws.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
     }
   ],
   "icons": {
